@@ -36,7 +36,10 @@ get_header(); ?>
 				$pages = get_pages($args); 
 
 				foreach ($pages as $page) {
+                    $customFields = get_post_custom($page->ID);
 					echo "<h1>".$page->post_title."</h1>";
+                    echo "<p>".$customFields["summary"][0]."</p>";
+                    echo '<a href="'.get_permalink($page->ID).'" class="more-link themebutton">Read More</a>';
 				}
 			?>
 <?php get_footer(); ?>

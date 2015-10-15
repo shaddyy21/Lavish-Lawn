@@ -2814,3 +2814,7 @@ h4.project-title {
     display: none;
 }
 
+.quote{
+   color: red;
+   font-size: 2em;
+}
